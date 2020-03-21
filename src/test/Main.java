@@ -6,6 +6,7 @@ import test.lambda.TestLambda;
 import test.safes.MyIteration;
 import test.safes.Test;
 import test.stream.TestStream;
+import test.treemap.TestTreeMap;
 
 public class Main {
 	public static void main(String args[]) {
@@ -20,7 +21,9 @@ public class Main {
 		
 		new Test(100, c);
 		
-		new TestStream();
+		//new TestStream();
+		
+		new TestTreeMap();
 		
 		MainNode.runAll();
 	}

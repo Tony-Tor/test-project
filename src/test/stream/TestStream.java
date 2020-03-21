@@ -8,6 +8,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import test.MainNode;
+import test.utill.ITest;
+import test.utill.TestUtill;
 
 public class TestStream extends MainNode {
 
@@ -75,8 +77,6 @@ public class TestStream extends MainNode {
         int count1 = 10000;
         List<String> list2 = new ArrayList<>();
         
-        System.out.println("" + (char)1 + (char)1 + (char)1);
-        
         for(int i = 'а' ; i < 'я'; i++) {
         	for(int k = 'а' ; k < 'я'; k++) {
         		for(int j = 'а' ; j < 'я'; j++) {
@@ -84,15 +84,17 @@ public class TestStream extends MainNode {
                 }
             }
         }
-        testSpeed(test2(list2), count1);
-        testSpeed(test(list2), count1);
         
-        testSpeed(test(list2), count1);
-        testSpeed(test2(list2), count1);
-        testSpeed(test(list2), count1);
-        testSpeed(test2(list2), count1);
-        testSpeed(test(list2), count1);
-        testSpeed(test2(list2), count1);
+        
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test2(list2), count1) + " nsec");
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test(list2), count1) + " nsec");
+        
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test(list2), count1) + " nsec");
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test2(list2), count1) + " nsec");
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test(list2), count1) + " nsec");
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test2(list2), count1) + " nsec");
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test(list2), count1) + " nsec");
+        System.out.println("Speed run metod: " + TestUtill.testSpeed(test2(list2), count1) + " nsec");
     }
 	
 	public ITest test(List<String> list1) {
@@ -135,15 +137,5 @@ public class TestStream extends MainNode {
 	    return t;
 	}
 	
-	public void testSpeed(ITest t, int count) {      
-		int count1 = count; //первоначальное кол-во повтора выполнения testMethod
-		
-		long begin =  System.nanoTime();
-		
-		for (int i = 0; i < count1; i ++) t.test();
-		
-		long end = System.nanoTime();
-		
-		System.out.println("Speed run metod: " + (double)(end - begin) / count1 + " nsec");
-	}
+	
 }
