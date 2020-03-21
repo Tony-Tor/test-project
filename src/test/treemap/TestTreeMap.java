@@ -128,10 +128,10 @@ public class TestTreeMap extends MainNode {
 	       showAdvertisementToAdult(adultPeopleMap);
 	   }
 
-	   public static void showAdvertisementToYoung(Map map){
+	   public static void showAdvertisementToYoung(Map<Person, Integer> map){
 		   System.out.println(map.toString());
 	   }
-	   public static void showAdvertisementToAdult(Map map){
+	   public static void showAdvertisementToAdult(Map<Person, Integer> map){
 		   System.out.println(map.toString());
 	   }
 

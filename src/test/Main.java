@@ -5,7 +5,7 @@ import java.util.List;
 import test.lambda.TestLambda;
 import test.safes.MyIteration;
 import test.safes.Test;
-import test.stream.TestStream;
+//import test.stream.TestStream;
 import test.treemap.TestTreeMap;
 
 public class Main {

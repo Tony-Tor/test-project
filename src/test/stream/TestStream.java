@@ -26,7 +26,7 @@ public class TestStream extends MainNode {
 		list.add("Eight");
 		list.add("Nine");
 		list.add("Ten");
-		Stream stream = list.stream();
+		Stream<String> stream = list.stream();
 		       
 		stream.filter(x -> x.toString().length() == 3).forEach(System.out::print);
 		       
